@@ -20,6 +20,8 @@ spec:
         envFrom:
         - configMapRef:
             name: app-config
+        - secretRef:
+            name: app-secrets
         resources:
           limits:
             cpu: "0.5"

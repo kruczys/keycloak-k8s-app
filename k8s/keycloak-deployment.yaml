@@ -15,6 +15,7 @@ spec:
       containers:
       - name: keycloak
         image: quay.io/keycloak/keycloak:25.0.1
+        args: ["start-dev"]
         ports:
         - containerPort: 8080
         envFrom:
@@ -22,7 +23,6 @@ spec:
             name: app-config
         - secretRef:
             name: app-secrets
-        command: ["start-dev"]
         resources:
           limits:
             cpu: "1"
