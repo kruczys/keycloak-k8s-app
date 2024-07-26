@@ -25,23 +25,18 @@ The application consists of the following components:
 - Docker
 - Minikube
 - kubectl
-- Node.js and npm (for local development)
 
 ## Setup
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/kruczys/keycloak-k8s-app.git
    cd keycloak-k8s-app
    ```
-
-2. Build Docker images for frontend and backend:
-   ```
-   docker build -t movie-app-frontend ./frontend
-   docker build -t movie-app-backend ./backend
-   ```
-
-3. Start Minikube:
+   
+2. Start Minikube:
+   
    ```
    minikube start
    ```
@@ -60,20 +55,18 @@ The application consists of the following components:
 
 3. Set up port forwarding for accessing the application:
    ```
-   kubectl port-forward svc/frontend-service 3000:3000 &
-   kubectl port-forward svc/backend-service 5000:5000 &
-   kubectl port-forward svc/keycloak 8080:8080 &
+   chmod +x port-forward.sh
+   ./port-forward.sh
    ```
 
 4. Access the application:
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
+   - Backend API: http://localhost:3001
    - Keycloak: http://localhost:8080
 
 ## Deployment
 
 The application is deployed using Kubernetes. The `k8s` folder contains all necessary Kubernetes configuration files:
-
 
 - `backend-deployment.yaml`: Deployment for the Express.js backend
 - `backend-service.yaml`: 
