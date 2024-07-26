@@ -1,0 +1,12 @@
+{
+    "realm": "main",
+    "auth-server-url": "http://localhost:8080",
+    "ssl-required": "external",
+    "resource": "backend",
+    "verify-token-audience": true,
+    "credentials": {
+      "secret": "BXGqIMMWkoeGhMfM2xRXNKUzUG6PdYDK"
+    },
+    "confidential-port": 0,
+    "policy-enforcer": {}
+  }
