@@ -1,6 +1,6 @@
 # Movie Review App
 
-This project is a simple movie review application built using Next.js for the frontend and Express.js for the backend. It's deployed using Kubernetes and includes Keycloak for authentication and PostgreSQL for data storage. This project was made as final for "Technologie Chmurowe" class at University of Gdańsk.
+This project is a simple movie review application built using Next.js for the frontend and Express.js for the backend. It's deployed using Kubernetes and includes Keycloak for authentication and PostgreSQL for data storage. This project was made as final for "Technologie Chmurowe" class at University of Gdańsk. App won't work as intended because deployment doesn't automatically set up keycloak service config until I update it. Before that it's more of a display of my ability to use Kubernetes and Docker at basic level.
 
 ## Table of Contents
 
@@ -69,18 +69,18 @@ The application consists of the following components:
 The application is deployed using Kubernetes. The `k8s` folder contains all necessary Kubernetes configuration files:
 
 - `backend-deployment.yaml`: Deployment for the Express.js backend
-- `backend-service.yaml`: 
-- `configmap.yaml`: 
+- `backend-service.yaml`: Service setup for backend
+- `configmap.yaml`: Configuration map
 - `frontend-deployment.yaml`: Deployment for the Next.js frontend
-- `frontend-service.yaml`:
-- `hpa.yaml`: 
+- `frontend-service.yaml`: Service setup for frontend
+- `hpa.yaml`: Configuration for Horizontal Pod Autoscaler
 - `keycloak-deployment.yaml`: Deployment for Keycloak authentication server
-- `keycloak-pvc.yaml`: 
-- `keycloak-service.yaml`: 
+- `keycloak-pvc.yaml`: Configuration for keycloak service Persistent Volume Claim
+- `keycloak-service.yaml`: Service setup for keycloak
 - `postgres-deployment.yaml`: Deployment for PostgreSQL database
-- `postgres-pvc.yaml`: 
-- `postgres-service.yaml`: 
-- `secret.yaml`: 
+- `postgres-pvc.yaml`: Configuration for postgres seruvce Persistent Volume Claim
+- `postgres-service.yaml`: Service setup for postgres
+- `secret.yaml`: Secrets map
 
 
 
