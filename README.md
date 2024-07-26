@@ -1,6 +1,6 @@
 # Movie Review App
 
-This project is a simple movie review application built using Next.js for the frontend and Express.js for the backend. It's deployed using Kubernetes and includes Keycloak for authentication and PostgreSQL for data storage.
+This project is a simple movie review application built using Next.js for the frontend and Express.js for the backend. It's deployed using Kubernetes and includes Keycloak for authentication and PostgreSQL for data storage. This project was made as final for "Technologie Chmurowe" class at University of Gdańsk.
 
 ## Table of Contents
 
